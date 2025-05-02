@@ -12,7 +12,7 @@ TEMU SHOPINGMALL을 참고하여 만든 클론 사이트입니다.
 ## 🌎 Tech
 HTML, CSS,(SCSS), JS, Git
 
-## 🖥️ Soft Skill
+## 🖥️ Other Skill
 Figma, Slack, Notion, Firebase
 
 ## 📚 주요 기능
