@@ -25,7 +25,7 @@ Figma, Slack, Notion, Firebase
 - 택배조회 및 챗봇 기능을 API를 통해 통합, 사용자 경험을 향상시킴.
 - 사용자 리뷰와 문의를 카테고리 및 조건별로 필터링하여 필요한 정보를 쉽게 찾을 수 있도록 구현.
 
-## ✨ HTML, CSS, Git Basic Rule
+## ✨ Rule
 - 주석필수
 - HTML 클래스는 더블언더스코어 방식을 사용한다.
 - HTML 클래스의 체이닝은 3개가 넘어가지 않게 한다. ex) main**slide**arrow / main**slide**arrow-left
