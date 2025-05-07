@@ -101,7 +101,6 @@ leftBtn.addEventListener("click", () => {
 });
 
 // 자동슬라이드 및 정지기능 함수
-
 let timer = undefined;
 
 const autoSlide = () => {
