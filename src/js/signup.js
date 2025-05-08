@@ -241,3 +241,52 @@ const validationFnc = () => {
     console.log("nope");
   }
 };
+
+const signUpBtn = document.querySelector("#signup__btn > button");
+signUpBtn.addEventListener("click", async function () {
+  if (
+    !(
+      idValidation &&
+      passwordValidation &&
+      emailValidation &&
+      checkboxValidation
+    )
+  ) {
+    return; // 유효성 검사 실패 시 동작 안 함
+  }
+
+  const userData = {
+    userid: userid.value,
+    password: password.value,
+    email: `${emailInput.value.trim()}@${domainSelect.value}`,
+    agreements: {
+      age: ageCheckbox.checked,
+      use: useCheckbox.checked,
+      userinfo: userinfoCheckbox.checked,
+      marketing: marketingCheckbox.checked,
+      event: eventCheckbox.checked,
+    },
+  };
+
+  try {
+    const res = await fetch("http://127.0.0.1:5503/src/js/signup", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(userData),
+    });
+
+    if (res.ok) {
+      const result = await res.json();
+      alert("회원가입 성공: " + result.message);
+      window.location.href = "/login"; // 로그인 페이지로 이동
+    } else {
+      const error = await res.json();
+      alert("회원가입 실패: " + error.message);
+    }
+  } catch (err) {
+    alert("서버 오류가 발생했습니다.");
+    console.error(err);
+  }
+});
